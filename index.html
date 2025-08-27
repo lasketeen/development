@@ -10,7 +10,9 @@
             margin: 0;
             font-family: 'Segoe UI', Arial, sans-serif;
             color: #fff;
-            background: url("images/background.png") no-repeat center center fixed;
+
+            /* Scales with tab size */
+            background: url("images/background.png") no-repeat center center;
             background-size: cover;
 
             min-height: 100vh;
@@ -33,17 +35,19 @@
             top: 0; left: 0;
             width: 100%;
             background: rgba(0,0,0,0.7);
-            padding: 15px 30px;
+            padding: 15px 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
             z-index: 2;
             backdrop-filter: blur(6px);
+            box-sizing: border-box;
         }
 
         nav h1 {
             margin: 0;
             font-size: 1.4rem;
+            white-space: nowrap;
         }
 
         nav ul {
@@ -52,6 +56,7 @@
             gap: 20px;
             margin: 0;
             padding: 0;
+            flex-wrap: wrap;
         }
 
         nav ul li a {
@@ -74,6 +79,7 @@
             box-shadow: 0 4px 24px rgba(0,0,0,0.4);
             position: relative;
             z-index: 1;
+            box-sizing: border-box;
         }
 
         h1, h2 {
@@ -88,6 +94,25 @@
 
         ul {
             padding-left: 1.2em;
+        }
+
+        /* Responsive tweaks */
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav ul {
+                flex-direction: column;
+                width: 100%;
+                margin-top: 10px;
+            }
+
+            .container {
+                margin: 140px 20px 40px; /* more padding for small screens */
+                padding: 20px;
+            }
         }
     </style>
 </head>
@@ -107,10 +132,10 @@
 
         <h2 id="features">Features</h2>
         <ul>
-            <li>Custom background image support</li>
+            <li>Custom background image scales with tab size</li>
             <li>Dark overlay for readability</li>
-            <li>Sticky top navigation bar</li>
-            <li>Responsive design</li>
+            <li>Sticky + responsive top navigation bar</li>
+            <li>Responsive layout for small screens</li>
         </ul>
 
         <h2 id="getstarted">Get Started</h2>
