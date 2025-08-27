@@ -139,25 +139,39 @@
         <br>
         <br>
         <br>
-        <!-- Bottom bar -->
-        <div style="
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background: rgba(0,0,0,0.8);
-            color: #ffe082;
-            padding: 16px 5%;
-            box-sizing: border-box;
-            z-index: 3;
-            font-size: 1rem;
-        ">
-            <div style="display: flex; flex-direction: column; gap: 8px;">
-                <div>Row 1: Add your text here</div>
-                <div>Row 2: More info or links</div>
-                <div>Row 3: Anything else you want</div>
-            </div>
-        </div>
     </div>
+    <!-- Bottom bar -->
+    <div class="bottom-bar">
+        <div class="bottom-row">Row 1: Add your text here</div>
+        <div class="bottom-row">Row 2: More text can go here</div>
+        <!-- Add more rows as needed -->
+    </div>
+    <style>
+        .bottom-bar {
+            position: fixed;
+            bottom: 0; left: 0;
+            width: 100%;
+            background: rgba(0,0,0,0.6);
+            box-shadow: 0 -4px 24px rgba(0,0,0,0.4);
+            padding: 16px 5%;
+            z-index: 2;
+            border-radius: 12px 12px 0 0;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            box-sizing: border-box;
+        }
+        .bottom-row {
+            color: #fff;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+        @media (max-width: 800px) {
+            .bottom-bar {
+                padding: 12px 2%;
+                font-size: 0.95rem;
+            }
+        }
+    </style>
 </body>
 </html>
