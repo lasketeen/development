@@ -107,8 +107,11 @@
 <body>
     <!-- Top bar -->
     <nav>
-        <h1>lasketeen</h1>
-        <ul>
+        <h1 style="display: flex; align-items: center; gap: 10px;">
+            <img src="images/icon.png" alt="lasketeen" style="height: 32px; width: 32px; border-radius: 6px;">
+            lasketeen
+        </h1>
+        <ul style="flex-wrap: wrap;">
             <li><a href="index.html">Home</a></li>
             <li><a href="portfolio.html">Portfolio</a></li>
             <li><a href="etohEnthusiasts.html">etoh enthusiasts</a></li>
@@ -116,6 +119,33 @@
             <li><a href="craftCentury.html">Craft Century</a></li>
         </ul>
     </nav>
+    <style>
+        nav ul {
+            flex-wrap: wrap;
+        }
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 10px 3%;
+            }
+            nav h1 {
+                font-size: 1.1rem;
+            }
+            nav ul {
+                gap: 10px;
+                flex-direction: column;
+                width: 100%;
+            }
+            nav ul li {
+                width: 100%;
+            }
+            nav ul li a {
+                display: block;
+                padding: 8px 0;
+            }
+        }
+    </style>
 
     <!-- Grid layout content -->
     <div class="grid-layout">
